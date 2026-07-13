@@ -39,7 +39,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-primary btn-sm" href="#access">Request early access</a>
+        <a class="btn btn-primary btn-sm" href="#access">Book a call</a>
         <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <span class="menu-line"></span>
           <span class="menu-line"></span>
@@ -52,7 +52,7 @@
       <a href="#flow">How it works</a>
       <a href="#platform">Platform</a>
       <a href="#roadmap">Roadmap</a>
-      <a class="btn btn-primary" href="#access">Request early access</a>
+      <a class="btn btn-primary" href="#access">Book a discovery call</a>
     </div>
   </header>
 
@@ -77,9 +77,10 @@
       <div class="container hero-copy">
         <p class="pill" data-reveal><span class="pill-dot" aria-hidden="true"></span>Private beta · Onboarding independent hotels in Latin America</p>
         <h1 data-reveal style="--d:.08s">The operating system for hotel <em>asset&nbsp;monetization</em>.</h1>
-        <p class="lede" data-reveal style="--d:.16s">Your property is full of revenue you can’t see yet. Staylab turns underused rooms, spaces, and equipment into measurable, recurring profit — without adding a single key.</p>
-        <div class="cta-row" data-reveal style="--d:.24s">
-          <a class="btn btn-primary" href="#access">Request early access</a>
+        <p class="hero-kicker" data-reveal style="--d:.14s">Starting with <a href="#upgrade">Room Upgrade Intelligence</a><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7h9M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+        <p class="lede" data-reveal style="--d:.2s">Your property is full of revenue you can’t see yet. Staylab turns underused rooms, spaces, and equipment into measurable, recurring profit — without adding a single key.</p>
+        <div class="cta-row" data-reveal style="--d:.28s">
+          <a class="btn btn-primary" href="#access">Book a discovery call</a>
           <a class="btn btn-ghost" href="#problem">Learn more<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2.5v9M3 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
@@ -260,23 +261,94 @@
           <p class="section-sub">No dashboards. No jargon. A pipeline: Staylab prices what you already own against live demand, and routes it to whoever will pay for it.</p>
         </div>
 
-        <p class="sr-only">Hotel, then assets, then pricing engine, then demand signals, then marketplace, then revenue, then profit.</p>
+        <p class="sr-only">Hotel, then assets, then pricing engine, then demand signals, then revenue, then profit.</p>
         <div class="pipeline" aria-hidden="true">
           <span class="pipe-node" data-reveal style="--pd:0s">Hotel</span>
           <span class="pipe-link"></span>
-          <span class="pipe-node" data-reveal style="--d:.07s; --pd:.6s">Assets</span>
+          <span class="pipe-node" data-reveal style="--d:.07s; --pd:.7s">Assets</span>
           <span class="pipe-link"></span>
-          <span class="pipe-node" data-reveal style="--d:.14s; --pd:1.2s">Pricing engine</span>
+          <span class="pipe-node" data-reveal style="--d:.14s; --pd:1.4s">Pricing engine</span>
           <span class="pipe-link"></span>
-          <span class="pipe-node" data-reveal style="--d:.21s; --pd:1.8s">Demand signals</span>
+          <span class="pipe-node" data-reveal style="--d:.21s; --pd:2.1s">Demand signals</span>
           <span class="pipe-link"></span>
-          <span class="pipe-node" data-reveal style="--d:.28s; --pd:2.4s">Marketplace</span>
+          <span class="pipe-node" data-reveal style="--d:.28s; --pd:2.8s">Revenue</span>
           <span class="pipe-link"></span>
-          <span class="pipe-node" data-reveal style="--d:.35s; --pd:3s">Revenue</span>
-          <span class="pipe-link"></span>
-          <span class="pipe-node pipe-node-final" data-reveal style="--d:.42s">Profit</span>
+          <span class="pipe-node pipe-node-final" data-reveal style="--d:.35s">Profit</span>
         </div>
         <p class="flow-note" data-reveal style="--d:.5s">Square meters in. Profit out. Continuously.</p>
+      </div>
+    </section>
+
+    <!-- ============ UPGRADE (where it starts) ============ -->
+    <section class="upgrade section" id="upgrade">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">04 · Where it starts</p>
+          <h2>Starting with <em>Room Upgrade Intelligence</em>.</h2>
+          <p class="section-sub">Before marketplaces and analytics, one product: the highest-margin asset you already own is a better room sitting empty tonight. Staylab prices it, offers it to the right guest, and books the difference — automatically.</p>
+        </div>
+
+        <div class="upgrade-grid">
+          <div class="sim" id="sim" data-reveal>
+            <div class="sim-head">
+              <span class="sim-title">Room Upgrade Intelligence</span>
+              <span class="sim-tag">Simulation</span>
+            </div>
+            <div class="sim-guest">
+              <span class="sim-name" id="sim-name">John Smith</span>
+              <span class="sim-meta" id="sim-meta">Room 204 · 2 nights · arrives Fri</span>
+            </div>
+            <div class="sim-prob">
+              <div class="sim-prob-top">
+                <span>Upgrade acceptance probability</span>
+                <span class="sim-prob-val" id="sim-prob-val">82%</span>
+              </div>
+              <div class="sim-bar"><span class="sim-bar-fill" id="sim-bar-fill"></span></div>
+            </div>
+            <div class="sim-offer" id="sim-offer">
+              <div>
+                <span class="sim-offer-title" id="sim-offer-title">Offer Executive Suite</span>
+                <span class="sim-offer-sub">Priced by the engine · paid at check-in</span>
+              </div>
+              <span class="sim-price" id="sim-price">+$89<i>/night</i></span>
+            </div>
+            <p class="sim-status" id="sim-status" role="status"></p>
+            <div class="sim-actions">
+              <button class="btn btn-primary sim-send" id="sim-send" type="button">Send offer</button>
+              <button class="btn btn-ghost" id="sim-next" type="button">Next guest</button>
+            </div>
+            <div class="sim-total">
+              <span>Revenue unlocked in this demo</span>
+              <span class="sim-total-val" id="sim-total-val">$0</span>
+            </div>
+          </div>
+
+          <aside class="math" data-reveal style="--d:.1s">
+            <p class="math-label">The math, GM-style</p>
+            <dl class="math-rows">
+              <div class="math-row"><dt>Rooms</dt><dd>60</dd></div>
+              <div class="math-row"><dt>ADR</dt><dd>$180</dd></div>
+              <div class="math-row"><dt>Occupancy</dt><dd>72%</dd></div>
+              <div class="math-row"><dt>Accepted upgrades</dt><dd>4 / week</dd></div>
+              <div class="math-row"><dt>Average premium</dt><dd>+$96 / night</dd></div>
+            </dl>
+            <div class="math-result">
+              <span class="math-result-label">Additional annual revenue</span>
+              <span class="math-result-val">≈ +$20,000</span>
+            </div>
+            <p class="math-foot">One asset. Zero new inventory. An illustrative scenario, not a promise — every property is different, so we’ll run yours on the call.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INDEPENDENTS (interlude) ============ -->
+    <section class="independents section" id="independents">
+      <div class="container independents-inner">
+        <p class="eyebrow" data-reveal>Why independent hotels?</p>
+        <p class="ind-line" data-reveal style="--d:.06s">Chains have revenue teams.<br />Pricing teams. Technology teams.</p>
+        <p class="ind-line ind-strong" data-reveal style="--d:.2s">Independent hotels don’t.</p>
+        <p class="ind-close" data-reveal style="--d:.34s"><em>That’s why we started here.</em></p>
       </div>
     </section>
 
@@ -284,34 +356,33 @@
     <section class="platform section" id="platform">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">04 · The infrastructure</p>
+          <p class="eyebrow">05 · The infrastructure</p>
           <h2>Revenue forms a network.<br />Networks become <em>infrastructure</em>.</h2>
           <p class="section-sub">Staylab isn’t software you install. It’s the layer your property runs on — growing module by module, until every earning asset moves through one system.</p>
         </div>
 
         <div class="module-grid">
           <article class="module module-flagship" data-reveal>
-            <div class="module-top">
-              <svg class="module-icon" viewBox="0 0 28 28" aria-hidden="true"><rect x="5" y="9" width="11" height="14" rx="2"/><path d="M16 11.5 23.5 4.5M17.5 4.5h6v6"/></svg>
-              <span class="module-status module-status-live">Private beta</span>
-            </div>
-            <h3>Room Upgrade Intelligence</h3>
-            <p>Price and sell the right upgrade to the right guest, automatically — before they ever reach the front desk.</p>
-            <div class="module-demo" aria-hidden="true">
-              <div class="demo-card">
-                <div class="demo-row">
-                  <span class="demo-label">Guest · Room 204 · 2 nights</span>
-                  <span class="demo-tag">Arriving Fri</span>
-                </div>
-                <div class="demo-offer">
-                  <div>
-                    <span class="demo-offer-title">Offer Terrace Suite</span>
-                    <span class="demo-offer-sub">78% acceptance likelihood</span>
-                  </div>
-                  <span class="demo-price">+$96<i>/night</i></span>
-                </div>
-                <div class="demo-actions"><span class="demo-btn">Send offer</span><span class="demo-btn demo-btn-quiet">Hold</span></div>
+            <div class="module-flag-copy">
+              <div class="module-top">
+                <svg class="module-icon" viewBox="0 0 28 28" aria-hidden="true"><rect x="5" y="9" width="11" height="14" rx="2"/><path d="M16 11.5 23.5 4.5M17.5 4.5h6v6"/></svg>
+                <span class="module-status module-status-live">Live in private beta</span>
               </div>
+              <h3>Room Upgrade Intelligence</h3>
+              <p>Price and sell the right upgrade to the right guest, automatically — before they ever reach the front desk. The first module, running with our first hotels today. Everything below is built on what it learns.</p>
+              <a class="module-link" href="#upgrade">Try the simulation<svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7h9M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <div class="module-flag-viz" aria-hidden="true">
+              <div class="week">
+                <span class="week-day">M</span>
+                <span class="week-day is-hit">T</span>
+                <span class="week-day">W</span>
+                <span class="week-day is-hit">T</span>
+                <span class="week-day is-hit">F</span>
+                <span class="week-day is-hit">S</span>
+                <span class="week-day">S</span>
+              </div>
+              <p class="week-caption">4 accepted upgrades a week<br /><em>≈ +$20,000 a year</em></p>
             </div>
           </article>
 
@@ -396,7 +467,7 @@
     <section class="roadmap section" id="roadmap">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">05 · The horizon</p>
+          <p class="eyebrow">06 · The horizon</p>
           <h2>From one hotel’s rooftop<br />to a <em>global asset ecosystem</em>.</h2>
         </div>
 
@@ -444,16 +515,18 @@
             <rect x="13.3" y="13.3" width="3.2" height="3.2" rx="1" fill="var(--brass)"/>
           </svg>
         </div>
-        <h2 data-reveal style="--d:.06s">Be among the first hotels shaping the future of hotel&nbsp;<em>profitability</em>.</h2>
-        <p class="access-sub" data-reveal style="--d:.12s">We’re onboarding a limited group of independent hotels across Latin America. Leave your email and we’ll reach out when your market opens.</p>
+        <h2 data-reveal style="--d:.06s">Book a 30-minute <em>discovery call</em>.</h2>
+        <p class="access-sub" data-reveal style="--d:.12s">We’re looking for <strong>10 independent hotels</strong> to build Staylab together — founding partners, not beta testers.</p>
 
-        <form class="access-form" id="access-form" data-reveal style="--d:.18s" novalidate>
-          <label class="sr-only" for="email">Work email</label>
-          <input class="access-input" type="email" id="email" name="email" placeholder="you@yourhotel.com" autocomplete="email" required />
-          <button class="btn btn-primary" type="submit">Request early access</button>
-        </form>
-        <p class="access-success" id="access-success" role="status" hidden>You’re on the list. We’ll reach out when your market opens.</p>
-        <p class="access-note" data-reveal style="--d:.24s">Limited onboarding · Independent hotels · LATAM first</p>
+        <div class="access-slots" data-reveal style="--d:.18s" aria-hidden="true">
+          <span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span>
+        </div>
+
+        <div class="access-cta" data-reveal style="--d:.24s">
+          <a class="btn btn-primary" href="mailto:hello@staylab.ai?subject=Discovery%20call%20%E2%80%94%20Staylab">Book a discovery call</a>
+        </div>
+        <p class="access-alt" data-reveal style="--d:.3s">Or write to us directly: <a href="mailto:hello@staylab.ai">hello@staylab.ai</a></p>
+        <p class="access-note" data-reveal style="--d:.36s">30 minutes · We run your numbers live · LATAM first</p>
       </div>
     </section>
   </main>
@@ -482,8 +555,8 @@
         </div>
         <div class="footer-col">
           <span class="footer-col-title">Contact</span>
-          <a href="mailto:hello@staylab.com">hello@staylab.com</a>
-          <a href="#access">Early access</a>
+          <a href="mailto:hello@staylab.ai">hello@staylab.ai</a>
+          <a href="#access">Book a call</a>
         </div>
       </nav>
     </div>

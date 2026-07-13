@@ -9,8 +9,10 @@ Premium dark-mode landing page for Staylab, the operating system for hotel asset
 - **Type**: Instrument Sans (UI/headlines) · Newsreader italic (pivotal words) · Geist Mono (data labels)
 - **Signature**: zero-dependency 3D canvas hero — a rotating tower of window-points with brass "monetized" nodes emitting revenue particles into orbital rings
 - **The Asset Engine**: a scroll-driven sticky scene where a line-art hotel wakes up — eight assets light one by one, each feeding a golden revenue line into a central engine (the Staylab mark)
-- **The pipeline**: an animated conceptual flow — Hotel → Assets → Pricing engine → Demand signals → Marketplace → Revenue → Profit
-- **Narrative arc**: numbered chapters — 01 The old lens (occupancy) → 02 The new lens (assets) → 03 Inside the engine → 04 The infrastructure → 05 The horizon
+- **The pipeline**: an animated conceptual flow — Hotel → Assets → Pricing engine → Demand signals → Revenue → Profit (Marketplace lives in the roadmap, not the core flow)
+- **The wedge**: today's product is Room Upgrade Intelligence — kicker under the hero headline, an interactive simulation (send offers, watch the model hold low-probability guests), and a GM-style scenario panel (≈ +$20,000/yr, clearly labeled illustrative)
+- **Narrative arc**: numbered chapters — 01 The old lens → 02 The new lens → 03 Inside the engine → 04 Where it starts (the wedge) → 05 The infrastructure → 06 The horizon, with "Why independent hotels?" as an interlude
+- **Conversion**: no email form — the CTA is "Book a discovery call" (mailto: hello@staylab.ai), framed as a founding cohort of 10 independent hotels
 - **No frameworks**: hand-rolled vanilla JS, CSS custom properties, IntersectionObserver reveals, scroll-linked moments
 
 ## Files
@@ -33,4 +35,5 @@ python3 -m http.server 4870
 
 - `?static` query param previews the reduced-motion experience (all reveals shown, animations off)
 - `prefers-reduced-motion` is fully respected: static hero frame, no marquee, no reveals
-- The email form is front-end only — wire the submit handler in `main.js` to your backend or a form service when ready
+- The "Book a discovery call" buttons point to `mailto:hello@staylab.ai` — swap the href for a Calendly/Cal.com link when one exists
+- The upgrade simulation guests live in `main.js` (`guests` array) — adjust names, offers, and probabilities freely

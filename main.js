@@ -346,23 +346,70 @@
     }
   }
 
-  /* ---------- Email capture ---------- */
-  const form = document.getElementById("access-form");
-  if (form) {
-    const input = document.getElementById("email");
-    const success = document.getElementById("access-success");
-    input.addEventListener("input", () => input.classList.remove("is-invalid"));
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const valid = input.value.trim() !== "" && input.checkValidity();
-      if (!valid) {
-        input.classList.add("is-invalid");
-        input.focus();
-        return;
+  /* ---------- Upgrade simulation ---------- */
+  const simEl = document.getElementById("sim");
+  if (simEl) {
+    const guests = [
+      { name: "John Smith", meta: "Room 204 · 2 nights · arrives Fri", nights: 2, offer: "Executive Suite", price: 89, prob: 82 },
+      { name: "Ana García", meta: "Room 310 · 3 nights · arrives Sat", nights: 3, offer: "Terrace Suite", price: 74, prob: 76 },
+      { name: "M. Tanaka", meta: "Room 118 · 1 night · arrives Tue", nights: 1, offer: "Junior Suite", price: 59, prob: 31 },
+      { name: "L. Fontaine", meta: "Room 402 · 2 nights · arrives Thu", nights: 2, offer: "Executive Suite", price: 96, prob: 88 },
+    ];
+    const $ = (id) => document.getElementById(id);
+    const nameEl = $("sim-name"), metaEl = $("sim-meta"), probVal = $("sim-prob-val"),
+      barFill = $("sim-bar-fill"), offerTitle = $("sim-offer-title"), priceEl = $("sim-price"),
+      statusEl = $("sim-status"), sendBtn = $("sim-send"), nextBtn = $("sim-next"),
+      totalEl = $("sim-total-val");
+    let idx = 0, total = 0, busy = false;
+
+    const render = () => {
+      const g = guests[idx];
+      nameEl.textContent = g.name;
+      metaEl.textContent = g.meta;
+      probVal.textContent = `${g.prob}%`;
+      offerTitle.textContent = `Offer ${g.offer}`;
+      priceEl.innerHTML = `+$${g.price}<i>/night</i>`;
+      simEl.classList.toggle("low", g.prob < 50);
+      statusEl.classList.remove("ok");
+      if (g.prob < 50) {
+        statusEl.textContent = `Model holds this offer — ${g.prob}% acceptance. No spam, no discount reflex.`;
+        sendBtn.disabled = true;
+        sendBtn.textContent = "Held by the model";
+      } else {
+        statusEl.textContent = "";
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send offer";
       }
-      form.hidden = true;
-      success.hidden = false;
+      barFill.style.width = "0%";
+      setTimeout(() => { barFill.style.width = `${g.prob}%`; }, 40);
+    };
+
+    sendBtn.addEventListener("click", () => {
+      if (busy || sendBtn.disabled) return;
+      const g = guests[idx];
+      busy = true;
+      sendBtn.disabled = true;
+      statusEl.classList.remove("ok");
+      statusEl.textContent = "Offer sent — guest is viewing…";
+      const gain = g.price * g.nights;
+      const finish = () => {
+        statusEl.classList.add("ok");
+        statusEl.textContent = `Accepted ✓ +$${gain} added to the stay (${g.nights} night${g.nights > 1 ? "s" : ""})`;
+        total += gain;
+        totalEl.textContent = `$${total.toLocaleString("en-US")}`;
+        busy = false;
+      };
+      if (reducedMotion) finish();
+      else setTimeout(finish, 900);
     });
+
+    nextBtn.addEventListener("click", () => {
+      if (busy) return;
+      idx = (idx + 1) % guests.length;
+      render();
+    });
+
+    render();
   }
 
   /* ---------- Hero canvas: the night tower ---------- */
