@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staylab — The Operating System for Hotel Asset Monetization</title>
+  <meta name="description" content="Staylab helps independent hotels turn underused rooms, spaces, and assets into measurable profit. The operating system for hotel asset monetization — starting in Latin America." />
+  <meta name="theme-color" content="#08090D" />
+  <meta property="og:title" content="Staylab — The Operating System for Hotel Asset Monetization" />
+  <meta property="og:description" content="Turn the assets your hotel already owns into measurable, recurring profit." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Staylab — home">
+        <svg class="brand-mark" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+          <rect x="1" y="1" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
+          <rect x="5.5"  y="5.5"  width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.35"/>
+          <rect x="13.3" y="5.5"  width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.35"/>
+          <rect x="5.5"  y="13.3" width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.35"/>
+          <rect x="13.3" y="13.3" width="3.2" height="3.2" rx="1" fill="var(--brass)"/>
+        </svg>
+        <span class="brand-name">Staylab</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#engine">The shift</a>
+        <a href="#flow">How it works</a>
+        <a href="#platform">Platform</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm" href="#access">Request early access</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#engine">The shift</a>
+      <a href="#flow">How it works</a>
+      <a href="#platform">Platform</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="btn btn-primary" href="#access">Request early access</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-visual" aria-hidden="true">
+        <canvas id="hero-canvas"></canvas>
+        <div class="chip chip-1">
+          <span class="chip-dot"></span>
+          <span class="chip-label">Rooftop lease activated</span>
+          <span class="chip-value">+$18,400<i>/yr</i></span>
+        </div>
+        <div class="chip chip-2">
+          <span class="chip-dot"></span>
+          <span class="chip-label">Suite upgrade accepted</span>
+          <span class="chip-value">+$96<i>/night</i></span>
+        </div>
+      </div>
+
+      <div class="container hero-copy">
+        <p class="pill" data-reveal><span class="pill-dot" aria-hidden="true"></span>Private beta · Onboarding independent hotels in Latin America</p>
+        <h1 data-reveal style="--d:.08s">The operating system for hotel <em>asset&nbsp;monetization</em>.</h1>
+        <p class="lede" data-reveal style="--d:.16s">Your property is full of revenue you can’t see yet. Staylab turns underused rooms, spaces, and equipment into measurable, recurring profit — without adding a single key.</p>
+        <div class="cta-row" data-reveal style="--d:.24s">
+          <a class="btn btn-primary" href="#access">Request early access</a>
+          <a class="btn btn-ghost" href="#problem">Learn more<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2.5v9M3 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <div class="ticker-row">
+            <span class="tk"><b>Suite upgrade</b><em>+$96/night</em></span>
+            <span class="tk"><b>Rooftop lease</b><em>+$18,400/yr</em></span>
+            <span class="tk"><b>Parking yield</b><em>+11% utilization</em></span>
+            <span class="tk"><b>Spa off-peak</b><em>+$2,300/mo</em></span>
+            <span class="tk"><b>FF&amp;E resale</b><em>$12,750 recovered</em></span>
+            <span class="tk"><b>Late checkout</b><em>34% attach rate</em></span>
+            <span class="tk"><b>Meeting room</b><em>+$640/day</em></span>
+            <span class="tk"><b>Storage lease</b><em>+$410/mo</em></span>
+          </div>
+          <div class="ticker-row">
+            <span class="tk"><b>Suite upgrade</b><em>+$96/night</em></span>
+            <span class="tk"><b>Rooftop lease</b><em>+$18,400/yr</em></span>
+            <span class="tk"><b>Parking yield</b><em>+11% utilization</em></span>
+            <span class="tk"><b>Spa off-peak</b><em>+$2,300/mo</em></span>
+            <span class="tk"><b>FF&amp;E resale</b><em>$12,750 recovered</em></span>
+            <span class="tk"><b>Late checkout</b><em>34% attach rate</em></span>
+            <span class="tk"><b>Meeting room</b><em>+$640/day</em></span>
+            <span class="tk"><b>Storage lease</b><em>+$410/mo</em></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="problem section" id="problem">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">01 · The old lens</p>
+          <h2>The industry thinks in <em>occupancy</em>.</h2>
+          <p class="section-sub">Decades of hospitality software optimized a single number — how many rooms are full tonight. Meanwhile, everything else a hotel owns sits outside the revenue conversation entirely.</p>
+        </div>
+
+        <div class="problem-grid">
+          <ul class="problem-list" data-reveal>
+            <li class="problem-item" data-group="0" tabindex="0">
+              <h3>Unused inventory</h3>
+              <p>Rooftops, meeting rooms, parking, storage — square meters that earn nothing between bookings.</p>
+            </li>
+            <li class="problem-item" data-group="1" tabindex="0">
+              <h3>Premium upgrades</h3>
+              <p>Better rooms are given away at check-in as favors instead of priced and sold as products.</p>
+            </li>
+            <li class="problem-item" data-group="2" tabindex="0">
+              <h3>Ancillary services</h3>
+              <p>Spa, dining, experiences — run as amenities to justify the rate, not as revenue lines of their own.</p>
+            </li>
+            <li class="problem-item" data-group="3" tabindex="0">
+              <h3>FF&amp;E lifecycle</h3>
+              <p>Furniture and equipment are bought at retail, depreciated in the dark, and thrown away at a loss.</p>
+            </li>
+            <li class="problem-item" data-group="4" tabindex="0">
+              <h3>Disconnected revenue</h3>
+              <p>What little asset revenue exists lives in spreadsheets and side deals — unmeasured, so never optimized.</p>
+            </li>
+          </ul>
+
+          <div class="facade-wrap" data-reveal style="--d:.1s">
+            <div class="facade-frame">
+              <div class="facade" id="facade" aria-hidden="true"></div>
+              <div class="facade-caption">
+                <span class="facade-caption-label">Asset map · 60-room independent</span>
+                <span class="facade-legend"><span class="legend-dot"></span>Untapped revenue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ENGINE (the shift) ============ -->
+    <section class="engine" id="engine">
+      <div class="engine-track" id="engine-track">
+        <div class="engine-sticky">
+          <div class="container engine-layout">
+            <div class="engine-text">
+              <p class="eyebrow">02 · The new lens</p>
+              <div class="engine-lines">
+                <p class="engine-line" data-beat="0">The industry sees <em>a&nbsp;building</em>.</p>
+                <p class="engine-line" data-beat="1">We see a portfolio of&nbsp;<em>assets</em>.</p>
+                <p class="engine-line" data-beat="2">Every asset can&nbsp;<em>earn</em>.</p>
+                <p class="engine-line" data-beat="3">One property. <em>One&nbsp;engine.</em></p>
+              </div>
+              <p class="engine-caption" id="engine-caption" aria-hidden="true"></p>
+              <p class="sr-only">As you scroll, the hotel's assets — rooftop, suites, spa, meeting room, restaurant, parking, storage, and furniture — light up one by one, each feeding revenue into a single engine at the heart of the property.</p>
+            </div>
+
+            <div class="engine-stage" id="engine-stage" aria-hidden="true">
+              <svg id="engine-svg" viewBox="0 0 720 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#E3BE7E" stop-opacity="0.45"/>
+                    <stop offset="100%" stop-color="#E3BE7E" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <g class="e-building">
+                  <path class="e-draw" pathLength="1" d="M40 540 H680"/>
+                  <path class="e-draw" pathLength="1" d="M260 540 V118 Q260 110 268 110 H452 Q460 110 460 118 V540"/>
+                  <path class="e-draw" pathLength="1" d="M140 540 V358 Q140 350 148 350 H260"/>
+                  <path class="e-draw" pathLength="1" d="M580 540 V398 Q580 390 572 390 H460"/>
+                  <path class="e-draw" pathLength="1" d="M300 96 H420 M310 96 V110 M328 96 V110 M346 96 V110 M364 96 V110 M382 96 V110 M400 96 V110"/>
+                  <path class="e-fade" d="M260 585 H460 M260 540 V585 M460 540 V585" stroke-dasharray="4 5"/>
+                  <g id="e-windows"></g>
+                </g>
+                <g id="e-zones">
+                  <rect class="e-zone" data-zone="rooftop" x="300" y="88" width="120" height="22" rx="5"/>
+                  <rect class="e-zone" data-zone="suites" x="270" y="124" width="180" height="82" rx="6"/>
+                  <rect class="e-zone" data-zone="meeting" x="152" y="362" width="96" height="60" rx="6"/>
+                  <rect class="e-zone" data-zone="spa" x="152" y="462" width="96" height="58" rx="6"/>
+                  <rect class="e-zone" data-zone="restaurant" x="472" y="400" width="96" height="56" rx="6"/>
+                  <rect class="e-zone" data-zone="storage" x="472" y="478" width="96" height="50" rx="6"/>
+                  <rect class="e-zone" data-zone="parking" x="268" y="546" width="184" height="32" rx="6"/>
+                  <g class="e-zone" data-zone="ffe">
+                    <rect x="296" y="420" width="26" height="26" rx="5"/>
+                    <rect x="330" y="452" width="12" height="12" rx="3"/>
+                    <rect x="288" y="456" width="12" height="12" rx="3"/>
+                  </g>
+                </g>
+                <g id="e-links">
+                  <path class="e-link" data-link="rooftop" pathLength="1" d="M360 99 Q348 210 360 306"/>
+                  <path class="e-link" data-link="suites" pathLength="1" d="M450 164 Q420 240 368 310"/>
+                  <path class="e-link" data-link="spa" pathLength="1" d="M200 486 Q280 420 350 330"/>
+                  <path class="e-link" data-link="meeting" pathLength="1" d="M200 392 Q260 360 348 324"/>
+                  <path class="e-link" data-link="restaurant" pathLength="1" d="M520 428 Q450 390 372 326"/>
+                  <path class="e-link" data-link="parking" pathLength="1" d="M360 545 Q360 440 360 334"/>
+                  <path class="e-link" data-link="storage" pathLength="1" d="M520 504 Q440 440 370 332"/>
+                  <path class="e-link" data-link="ffe" pathLength="1" d="M310 434 Q330 380 354 330"/>
+                </g>
+                <g id="e-core">
+                  <circle cx="360" cy="320" r="54" fill="url(#coreGlow)"/>
+                  <rect x="338" y="298" width="44" height="44" rx="11" stroke="#E3BE7E" stroke-width="1.4" fill="rgba(8,9,13,0.88)"/>
+                  <rect class="core-dot" x="349" y="309" width="8" height="8" rx="2.5"/>
+                  <rect class="core-dot" x="363" y="309" width="8" height="8" rx="2.5"/>
+                  <rect class="core-dot" x="349" y="323" width="8" height="8" rx="2.5"/>
+                  <rect class="core-dot core-dot-lit" x="363" y="323" width="8" height="8" rx="2.5"/>
+                </g>
+                <g id="e-particles"></g>
+              </svg>
+
+              <div class="echip" data-chip="rooftop" style="top:4%; left:50%; --tx:-50%;"><b>Rooftop</b><em>+$18,400/yr</em></div>
+              <div class="echip" data-chip="suites" style="top:21%; right:0;"><b>Suite upgrades</b><em>+$96/night</em></div>
+              <div class="echip" data-chip="spa" style="top:76%; left:0;"><b>Spa</b><em>+$2,300/mo</em></div>
+              <div class="echip" data-chip="meeting" style="top:55%; left:0;"><b>Meeting room</b><em>+$640/day</em></div>
+              <div class="echip" data-chip="restaurant" style="top:62%; right:0;"><b>Restaurant</b><em>+$1,150/wk</em></div>
+              <div class="echip" data-chip="parking" style="top:93%; left:50%; --tx:-50%;"><b>Parking</b><em>+11% utilization</em></div>
+              <div class="echip" data-chip="storage" style="top:79%; right:0;"><b>Storage</b><em>+$410/mo</em></div>
+              <div class="echip" data-chip="ffe" style="top:66%; left:4%;"><b>FF&amp;E resale</b><em>$12,750</em></div>
+            </div>
+          </div>
+          <p class="engine-hint" id="engine-hint" aria-hidden="true">Keep scrolling — the hotel wakes up</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISION ============ -->
+    <section class="vision section" id="vision">
+      <div class="container vision-inner">
+        <p class="eyebrow" data-reveal>Our thesis</p>
+        <blockquote class="vision-statement" id="vision-statement">
+          <p>Every hotel already owns valuable assets. Staylab helps monetize them.</p>
+        </blockquote>
+        <p class="vision-sub" data-reveal>The future of hospitality isn’t only higher occupancy. It’s the full value of every room, every square meter, every asset a hotel already owns — measured, priced, and earning.</p>
+      </div>
+    </section>
+
+    <!-- ============ FLOW (inside the engine) ============ -->
+    <section class="flow section" id="flow">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">03 · Inside the engine</p>
+          <h2>How an asset becomes <em>profit</em>.</h2>
+          <p class="section-sub">No dashboards. No jargon. A pipeline: Staylab prices what you already own against live demand, and routes it to whoever will pay for it.</p>
+        </div>
+
+        <p class="sr-only">Hotel, then assets, then pricing engine, then demand signals, then marketplace, then revenue, then profit.</p>
+        <div class="pipeline" aria-hidden="true">
+          <span class="pipe-node" data-reveal style="--pd:0s">Hotel</span>
+          <span class="pipe-link"></span>
+          <span class="pipe-node" data-reveal style="--d:.07s; --pd:.6s">Assets</span>
+          <span class="pipe-link"></span>
+          <span class="pipe-node" data-reveal style="--d:.14s; --pd:1.2s">Pricing engine</span>
+          <span class="pipe-link"></span>
+          <span class="pipe-node" data-reveal style="--d:.21s; --pd:1.8s">Demand signals</span>
+          <span class="pipe-link"></span>
+          <span class="pipe-node" data-reveal style="--d:.28s; --pd:2.4s">Marketplace</span>
+          <span class="pipe-link"></span>
+          <span class="pipe-node" data-reveal style="--d:.35s; --pd:3s">Revenue</span>
+          <span class="pipe-link"></span>
+          <span class="pipe-node pipe-node-final" data-reveal style="--d:.42s">Profit</span>
+        </div>
+        <p class="flow-note" data-reveal style="--d:.5s">Square meters in. Profit out. Continuously.</p>
+      </div>
+    </section>
+
+    <!-- ============ PLATFORM ============ -->
+    <section class="platform section" id="platform">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">04 · The infrastructure</p>
+          <h2>Revenue forms a network.<br />Networks become <em>infrastructure</em>.</h2>
+          <p class="section-sub">Staylab isn’t software you install. It’s the layer your property runs on — growing module by module, until every earning asset moves through one system.</p>
+        </div>
+
+        <div class="module-grid">
+          <article class="module module-flagship" data-reveal>
+            <div class="module-top">
+              <svg class="module-icon" viewBox="0 0 28 28" aria-hidden="true"><rect x="5" y="9" width="11" height="14" rx="2"/><path d="M16 11.5 23.5 4.5M17.5 4.5h6v6"/></svg>
+              <span class="module-status module-status-live">Private beta</span>
+            </div>
+            <h3>Room Upgrade Intelligence</h3>
+            <p>Price and sell the right upgrade to the right guest, automatically — before they ever reach the front desk.</p>
+            <div class="module-demo" aria-hidden="true">
+              <div class="demo-card">
+                <div class="demo-row">
+                  <span class="demo-label">Guest · Room 204 · 2 nights</span>
+                  <span class="demo-tag">Arriving Fri</span>
+                </div>
+                <div class="demo-offer">
+                  <div>
+                    <span class="demo-offer-title">Offer Terrace Suite</span>
+                    <span class="demo-offer-sub">78% acceptance likelihood</span>
+                  </div>
+                  <span class="demo-price">+$96<i>/night</i></span>
+                </div>
+                <div class="demo-actions"><span class="demo-btn">Send offer</span><span class="demo-btn demo-btn-quiet">Hold</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="module" data-reveal style="--d:.08s">
+            <div class="module-top">
+              <svg class="module-icon" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="2.6"/><circle cx="14" cy="4.5" r="2.2"/><circle cx="5" cy="21.5" r="2.2"/><circle cx="23" cy="21.5" r="2.2"/><path d="M14 7v4.4M12 15.8l-5 4M16 15.8l5 4"/></svg>
+              <span class="module-status">In development</span>
+            </div>
+            <h3>Ancillary Revenue</h3>
+            <p>Turn spa hours, dining, parking, and experiences into bookable, priced products with their own P&amp;L.</p>
+          </article>
+
+          <article class="module" data-reveal style="--d:.16s">
+            <div class="module-top">
+              <svg class="module-icon" viewBox="0 0 28 28" aria-hidden="true"><rect x="10" y="10" width="8" height="8" rx="1.5"/><path d="M23 10.5A10 10 0 0 0 6.5 5.5M5 17.5A10 10 0 0 0 21.5 22.5"/><path d="M6.5 1.5v4h4M21.5 26.5v-4h-4"/></svg>
+              <span class="module-status">In development</span>
+            </div>
+            <h3>FF&amp;E Marketplace</h3>
+            <p>Buy, sell, and track furniture, fixtures &amp; equipment across their full lifecycle — recovery instead of write-off.</p>
+          </article>
+
+          <article class="module" data-reveal style="--d:.24s">
+            <div class="module-top">
+              <svg class="module-icon" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 24h20"/><path d="M7 24v-7M13 24V11M19 24V6"/><circle cx="19" cy="3.5" r="1.6"/></svg>
+              <span class="module-status">Research</span>
+            </div>
+            <h3>Hotel Asset Analytics</h3>
+            <p>See every asset’s yield with the same rigor you track occupancy — one dashboard for the whole property.</p>
+          </article>
+
+          <article class="module" data-reveal style="--d:.32s">
+            <div class="module-top">
+              <svg class="module-icon" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 19c3.5 0 3.5-10 7-10s3.5 7 7 7 3.5-4 8-4"/><circle cx="10" cy="9" r="1.8"/></svg>
+              <span class="module-status">Research</span>
+            </div>
+            <h3>Revenue Optimization</h3>
+            <p>One engine that learns what each square meter can earn — and keeps pricing it as demand moves.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY STAYLAB ============ -->
+    <section class="why section" id="why">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">What we believe</p>
+          <h2>Principles, not features.</h2>
+        </div>
+
+        <ul class="principles">
+          <li class="principle" data-reveal>
+            <span class="principle-key">yield</span>
+            <h3>Unlock hidden revenue</h3>
+            <p>If an asset can be booked, upgraded, resold, or leased, it can earn. We find the earning.</p>
+          </li>
+          <li class="principle" data-reveal style="--d:.06s">
+            <span class="principle-key">margin</span>
+            <h3>Profit, not just occupancy</h3>
+            <p>A full hotel can still underperform. We optimize for what actually reaches the bottom line.</p>
+          </li>
+          <li class="principle" data-reveal style="--d:.12s">
+            <span class="principle-key">signal</span>
+            <h3>Decisions from data</h3>
+            <p>Every recommendation is backed by demand, pricing, and utilization signals — not intuition.</p>
+          </li>
+          <li class="principle" data-reveal style="--d:.18s">
+            <span class="principle-key">independents</span>
+            <h3>Built for independent hotels</h3>
+            <p>No chain infrastructure required. Single properties get the tooling of a global group.</p>
+          </li>
+          <li class="principle" data-reveal style="--d:.24s">
+            <span class="principle-key">compound</span>
+            <h3>A platform that compounds</h3>
+            <p>Each module feeds the next. The more assets you connect, the more the system learns.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP ============ -->
+    <section class="roadmap section" id="roadmap">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">05 · The horizon</p>
+          <h2>From one hotel’s rooftop<br />to a <em>global asset ecosystem</em>.</h2>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline-line" aria-hidden="true"><span class="timeline-fill" id="timeline-fill"></span></div>
+          <ol class="stages">
+            <li class="stage" data-reveal>
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-phase">Today</span>
+              <h3>Asset monetization</h3>
+              <p>Underused rooms, spaces, and equipment become new revenue lines — live with our first hotels.</p>
+            </li>
+            <li class="stage" data-reveal style="--d:.08s">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-phase">Next</span>
+              <h3>Revenue optimization</h3>
+              <p>Continuous pricing and packaging across every asset, learned per property, per season, per guest.</p>
+            </li>
+            <li class="stage" data-reveal style="--d:.16s">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-phase">Then</span>
+              <h3>Connected hotel platform</h3>
+              <p>One operating layer connecting assets, guests, and operators — the system the property runs on.</p>
+            </li>
+            <li class="stage" data-reveal style="--d:.24s">
+              <span class="stage-node" aria-hidden="true"></span>
+              <span class="stage-phase">Beyond</span>
+              <h3>Global hotel asset ecosystem</h3>
+              <p>A network where hotel assets are discovered, traded, and financed across borders.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="access section" id="access">
+      <div class="container access-inner">
+        <div class="access-mark" aria-hidden="true" data-reveal>
+          <svg width="44" height="44" viewBox="0 0 22 22">
+            <rect x="1" y="1" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
+            <rect x="5.5" y="5.5" width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.3"/>
+            <rect x="13.3" y="5.5" width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.3"/>
+            <rect x="5.5" y="13.3" width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.3"/>
+            <rect x="13.3" y="13.3" width="3.2" height="3.2" rx="1" fill="var(--brass)"/>
+          </svg>
+        </div>
+        <h2 data-reveal style="--d:.06s">Be among the first hotels shaping the future of hotel&nbsp;<em>profitability</em>.</h2>
+        <p class="access-sub" data-reveal style="--d:.12s">We’re onboarding a limited group of independent hotels across Latin America. Leave your email and we’ll reach out when your market opens.</p>
+
+        <form class="access-form" id="access-form" data-reveal style="--d:.18s" novalidate>
+          <label class="sr-only" for="email">Work email</label>
+          <input class="access-input" type="email" id="email" name="email" placeholder="you@yourhotel.com" autocomplete="email" required />
+          <button class="btn btn-primary" type="submit">Request early access</button>
+        </form>
+        <p class="access-success" id="access-success" role="status" hidden>You’re on the list. We’ll reach out when your market opens.</p>
+        <p class="access-note" data-reveal style="--d:.24s">Limited onboarding · Independent hotels · LATAM first</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Staylab — back to top">
+          <svg class="brand-mark" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+            <rect x="1" y="1" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
+            <rect x="5.5" y="5.5" width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.35"/>
+            <rect x="13.3" y="5.5" width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.35"/>
+            <rect x="5.5" y="13.3" width="3.2" height="3.2" rx="1" fill="currentColor" opacity="0.35"/>
+            <rect x="13.3" y="13.3" width="3.2" height="3.2" rx="1" fill="var(--brass)"/>
+          </svg>
+          <span class="brand-name">Staylab</span>
+        </a>
+        <p class="footer-tag">The operating system for hotel asset monetization.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <span class="footer-col-title">Company</span>
+          <a href="#vision">Thesis</a>
+          <a href="#platform">Platform</a>
+          <a href="#roadmap">Roadmap</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Contact</span>
+          <a href="mailto:hello@staylab.com">hello@staylab.com</a>
+          <a href="#access">Early access</a>
+        </div>
+      </nav>
+    </div>
+    <div class="container footer-base">
+      <p>© 2026 Staylab. Built in Latin America, expanding globally.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
